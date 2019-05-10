@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		59A2FA12226707C600319300 /* PredictionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A2FA11226707C600319300 /* PredictionResult.swift */; };
+		59C9C3E12285A78B00A30A65 /* fruits.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 59C9C3E02285A78B00A30A65 /* fruits.mlmodel */; };
 		59D922712265E2160010F2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D922702265E2160010F2DC /* AppDelegate.swift */; };
 		59D922732265E2160010F2DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D922722265E2160010F2DC /* ViewController.swift */; };
 		59D922762265E2160010F2DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D922742265E2160010F2DC /* Main.storyboard */; };
 		59D922782265E2180010F2DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D922772265E2180010F2DC /* Assets.xcassets */; };
 		59D9227B2265E2180010F2DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D922792265E2180010F2DC /* LaunchScreen.storyboard */; };
-		59D922862266040A0010F2DC /* cats_dogs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 59D922852266040A0010F2DC /* cats_dogs.mlmodel */; };
 		59D9228822660BFE0010F2DC /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D9228722660BFE0010F2DC /* UIImage+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		59A2FA11226707C600319300 /* PredictionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
+		59C9C3E02285A78B00A30A65 /* fruits.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = fruits.mlmodel; path = "../../../../TransferLearning/pytorch-mobilenet-v2-transfer-learning/data/model/fruits.mlmodel"; sourceTree = "<group>"; };
 		59D9226D2265E2160010F2DC /* ImagePredictionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePredictionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D922702265E2160010F2DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D922722265E2160010F2DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		59D922772265E2180010F2DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59D9227A2265E2180010F2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59D9227C2265E2180010F2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59D922852266040A0010F2DC /* cats_dogs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = cats_dogs.mlmodel; sourceTree = "<group>"; };
 		59D9228722660BFE0010F2DC /* UIImage+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,10 +62,10 @@
 			children = (
 				59D922702265E2160010F2DC /* AppDelegate.swift */,
 				59D922722265E2160010F2DC /* ViewController.swift */,
-				59D922852266040A0010F2DC /* cats_dogs.mlmodel */,
 				59D922742265E2160010F2DC /* Main.storyboard */,
 				59D922772265E2180010F2DC /* Assets.xcassets */,
 				59D922792265E2180010F2DC /* LaunchScreen.storyboard */,
+				59C9C3E02285A78B00A30A65 /* fruits.mlmodel */,
 				59D9227C2265E2180010F2DC /* Info.plist */,
 				59D9228722660BFE0010F2DC /* UIImage+Helpers.swift */,
 				59A2FA11226707C600319300 /* PredictionResult.swift */,
@@ -145,7 +145,7 @@
 			files = (
 				59D922732265E2160010F2DC /* ViewController.swift in Sources */,
 				59A2FA12226707C600319300 /* PredictionResult.swift in Sources */,
-				59D922862266040A0010F2DC /* cats_dogs.mlmodel in Sources */,
+				59C9C3E12285A78B00A30A65 /* fruits.mlmodel in Sources */,
 				59D922712265E2160010F2DC /* AppDelegate.swift in Sources */,
 				59D9228822660BFE0010F2DC /* UIImage+Helpers.swift in Sources */,
 			);

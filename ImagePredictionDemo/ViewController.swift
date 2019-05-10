@@ -13,8 +13,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var predictButton: UIButton!
     @IBOutlet weak var labelText: UILabel!
-    @IBOutlet weak var catProbability: UILabel!
-    @IBOutlet weak var dogProbability: UILabel!
+    
+    @IBOutlet weak var appleProbability: UILabel!
+    @IBOutlet weak var bananaProbability: UILabel!
+    @IBOutlet weak var orangeProbability: UILabel!
     
     typealias PredictionCompletion = ((PredictionResult?, String?) -> ())
 
@@ -77,7 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func predict(input: UIImage, complete: @escaping PredictionCompletion){
-        let model = cats_dogs()
+        let model = fruits()
         
         DispatchQueue.global(qos: .background).async {
             
@@ -88,12 +90,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 return
             }
             
-            guard let result = try? model.prediction(image: features) else {
+            guard let result = try? model.prediction(_0: features) else {
                 complete(nil, "Error while performing the prediction.")
                 return
             }
             DispatchQueue.main.async {
-                complete(PredictionResult(label: result.classLabel, probs: result.output), nil)
+                complete(PredictionResult(label: result.classLabel, probs: result._467), nil)
             }
         }
     }
@@ -109,13 +111,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if (predictionResult != nil) {
                 let classLabel = predictionResult!.classLabel
                 if (Int(classLabel) == 0){
-                    self.labelText.text = "It is a dog"
+                    self.labelText.text = "It is an apple"
+                } else if(Int(classLabel) == 1){
+                    self.labelText.text = "It is a banana"
                 }else {
-                    self.labelText.text = "It is a cat"
+                    self.labelText.text = "It is an orange"
                 }
-                
-                self.catProbability.text = String(format: "%.2f", predictionResult!.probabilties["1"]!)
-                self.dogProbability.text = String(format: "%.2f", predictionResult!.probabilties["0"]!)
+                self.appleProbability.text = String(format: "%.2f", predictionResult!.probabilties["0"]!)
+                self.bananaProbability.text = String(format: "%.2f", predictionResult!.probabilties["1"]!)
+                self.orangeProbability.text = String(format: "%.2f", predictionResult!.probabilties["2"]!)
                 
             }else{
                 print(error)
